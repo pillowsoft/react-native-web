@@ -2,7 +2,9 @@ const Linking = {
   addEventListener() {},
   removeEventListener() {},
   canOpenURL() { return true; },
-  getInitialURL() { return ''; },
+  getInitialURL() {
+    return new Promise(function (resolve, reject) { resolve(''); });
+  },
   openURL(url) {
     iframeOpen(url);
   }
